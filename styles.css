@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+#root {
+    font-size: 10px;
+}
+
+:root {
+    --blue-color: #0094d0;
+    --light-blue-color: #e0e8ef;
+    --yellow-border-color: #f8b042;
+    --white-color: #f8f8f7;
+    --text-grey-color: #666666;
+
+    --roboto-font: "Roboto", sans-serif;
+    --ubuntu-sans-font: "Ubuntu Sans", sans-serif;
+    --font-weight-400: 400;
+
+    --font-size-2: 2rem;
+    --fonst-size-1-7rem: 1.7rem;
+    --fonst-size-1-5rem: 1.5rem;
+    --fonst-size-1-4rem: 1.4rem;
+    --fonst-size-1-3rem: 1.3rem;
+    --fonst-size-1-2rem: 1.2rem;
+    --fonst-size-1-1rem: 1.1rem;
+    --fonst-size-1rem: 1rem;
+    --fonst-size-0-9rem: 0.9rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
