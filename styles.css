@@ -28,8 +28,10 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
+/* our code style from here */
+
 #root {
-    font-size: 10px;
+    font-size: 10pxw;
 }
 
 :root {
@@ -38,23 +40,366 @@ p, h1, h2, h3, h4, h5, h6 {
     --yellow-border-color: #f8b042;
     --white-color: #f8f8f7;
     --text-grey-color: #666666;
+    --text-black-color: #000000;
 
     --roboto-font: "Roboto", sans-serif;
     --ubuntu-sans-font: "Ubuntu Sans", sans-serif;
-    --font-weight-400: 400;
+}
 
-    --font-size-2: 2rem;
-    --fonst-size-1-7rem: 1.7rem;
-    --fonst-size-1-5rem: 1.5rem;
-    --fonst-size-1-4rem: 1.4rem;
-    --fonst-size-1-3rem: 1.3rem;
-    --fonst-size-1-2rem: 1.2rem;
-    --fonst-size-1-1rem: 1.1rem;
-    --fonst-size-1rem: 1rem;
-    --fonst-size-0-9rem: 0.9rem;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.font-size-24 {
+    font-size: 2.4rem;
+}
+
+.font-size-20 {
+    font-size: 2rem;
+}
+
+.font-size-16 {
+    font-size: 1.6rem;
+}
+
+.font-size-14 {
+    font-size: 1.4rem;
+}
+
+.font-size-12 {
+    font-size: 1.2rem;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.font-weight-semi-bold {
+    font-weight: 600;
+}
+
+.font-weight-normal {
+    font-weight: 400;
+}
+
+.text-white {
+    color: var(--white-color);
+}
+
+.text-black {
+    color: var(--text-black-color);
+}
+
+.text-grey {
+    color: var(--text-grey-color);
+}
+
+.border-yellow {
+    color: var(--yellow-border-color);
+}
+
+.blue-background {
+    background-color: var(--blue-color);
+}
+
+.blue-light-background {
+    background-color: var(--light-blue-color);
+}
+
+.font-family-roboto {
+    font-family: var(--roboto-font);
+}
+
+.font-family-ubuntu-sans {
+    font-family: var(--ubuntu-sans-font);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 15vw repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    background-color: var(--light-blue-color);
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.mdi {
+    font-size: 24px;
+    color: var(--white-color);
+    vertical-align: middle;
+}
+
+.sidebar {
+    background-color: var(--blue-color);
+    padding: 18px;
+    height: auto;
+    width: 15vw;
+}
+
+.sidebar-font-style {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: var(--roboto-font);
+    color: var(--white-color);
+}
+
+.logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.mdi-view-dashboard {
+    font-size: 35px;
+}
+
+.menu-icon-para {
+    display: flex;
+    gap: 30px;
+    /* border: 2px solid blue; */
+}
+
+.menu-group-one {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.menu-group-one,
+.menu-group-two {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.head {
+    grid-column: 2 / -1;
+}
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 60px 120px;
+    gap: 15px;
+    background-color: var(--white-color);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    grid-column: 1 / 2;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.mdi-magnify {
+    color: var(--text-black-color);
+}
+
+.search-holder {
+    background-color: var(--light-blue-color);
+    border: white;
+    border-radius: 20px;
+    flex: 1;
+}
+
+.student {
+    width: 35px;
+    height: 35px;
+}
+
+.functionality-one {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.mdi-bell-ring-outline {
+    color: black;
+}
+
+.student2 {
+    width: 50px;
+    height: 50px;
+}
+
+.functionality-two {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.btn {
+    background-color: var(--blue-color);
+    border: var(--blue-color);
+    border-radius: 30px;
+    flex-grow: 1;
+    height: 42px;
+}
+
+.card-details {
+    grid-column: 1 / -1;
+    background-color: var(--light-blue-color);
+}
+
+.cards {
+    display: grid; 
+    grid-template-columns: 1fr 20vw;
+    grid-template-rows: 50px;
+    padding: 35px 15px;
+}
+
+.grid-cards {
+    grid-column: 1 / 2;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.yellow-border-cards {
+    display: flex;
+    min-height: 250px;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--white-color);
+    padding: 15px 10px 15px 24px;
+    border-left: solid 7px var(--yellow-border-color);
+    border-radius: 10px;
+}
+
+.card-title {
+    font-family: var(--roboto-font);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.card-para {
+    font-family: var(--roboto-font);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-grey-color);
+}
+
+.black-colors {
+    color: black;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.icons > .mdi {
+    color: black
+}
+
+.grid-titles {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.grid-titles > h2 {
+    padding: 5px;
+}
+
+.grid-titles2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+}
+
+.aside {
+    margin-left: 20px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.aside-heading {
+    font-size: 1rem;
+    font-family: var(--roboto-font);
+    font-weight: 600;
+    color: var(--text-black-color);
+}
+
+.aside-para {
+    font-size: 0.9rem;
+    font-family: var(--roboto-font);
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--text-grey-color);
+}
+
+.title-box {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.aside-box1 {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.aside-box1,
+.aside-02 {
+    padding: 35px;
+    margin-right: 25px;
+}
+
+.aside-02 {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.no-border {
+    border-style: none;
+}
+
+.inside-aside {
+    width: 50px;
+}
+
+.image-box {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.aside-pic-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.aside-pic-text > h3 {
+    margin-top: -10px; margin-bottom: 20px;
+}
+
+.aside-box2 > h2 {
+    padding-bottom: 14px;
+}
+
+.grid-titles2 > h2 {
+    padding-right: 100px;
 }
